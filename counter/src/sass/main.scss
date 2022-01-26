@@ -1,0 +1,41 @@
+@use "sass:map";
+
+
+@mixin flex-center($direction,$wrap){
+    display: flex;
+    flex-direction : $direction;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: $wrap;
+}
+
+*{
+    padding:0;
+    margin:0;
+
+}
+
+
+
+.container{
+    @include flex-center(row,wrap);
+    width: 100vw;
+    height: 100vh;
+}
+
+.timeTiles{
+    @include flex-center(column,no-wrap);
+    width:5em;
+
+    background-color: black;
+    margin :2px;
+    color:white;
+    height: 5em;
+    font-size:2.2em;
+    border-radius: 4px;
+    font-weight: 700;
+    span{
+        color :green;
+        font-size: 2em;
+    }
+}
